@@ -1,5 +1,4 @@
 # Basic-Python-Projects
- This repository contains simple projects I created during the process of learning and practicing the Python language. It aims to apply basic programming concepts and develop different problem solving techniques.
 
 - **Basic Calculator**
   * This Python program is a simple calculator. You can add, subtract, multiply, or divide numbers. It keeps running until you choose to exit. It won’t let you divide by zero and asks again if the input is wrong.
