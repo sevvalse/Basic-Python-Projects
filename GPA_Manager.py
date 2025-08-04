@@ -12,7 +12,7 @@ def add_user(cur, username, password):
     try:
         # Insert a new user into the 'mathgrades' table
         cur.execute("INSERT INTO mathgrades (usernames, passwords) VALUES (?, ?)", (username, password))
-        print(f"User '{username}' has been added!")  # Confirmation message
+        print(f"User '{username}' has been added!") 
     except sql.IntegrityError:
         # Handle the case where the username already exists
         print(f"User '{username}' already exists!")
@@ -45,7 +45,7 @@ def view_grades(cur, user):
     return grades
 
 
-# Function to calculate GPA from midterm and final grades
+# Function to calculate GPA from midterm(%40) and final(%60) grades
 def calculate_gpa(midterm, final):
     return midterm * 0.4 + final * 0.6
 

@@ -1,11 +1,11 @@
 import os
 
-# List to store tasks
+
 todo_list = []
 
-# Main menu function
+
 def menu():
-    os.system("clear" if os.name == "posix" else "cls")  # Clears the screen
+    os.system("clear" if os.name == "posix" else "cls")
     print("To-Do List Application")
     print("1. List Tasks")
     print("2. Add Task")
@@ -13,13 +13,13 @@ def menu():
     print("4. Mark Task as Completed")
     print("5. Exit")
 
-# Function to add a task
+
 def add_task():
     task = input("Task to add: ")
     todo_list.append({"task": task, "done": False})
     print(f"'{task}' has been added to the list!")
 
-# Function to list tasks
+
 def list_tasks():
     if not todo_list:
         print("No tasks yet!")
@@ -28,7 +28,7 @@ def list_tasks():
             status = "[X]" if task["done"] else "[ ]"
             print(f"{i + 1}. {status} {task['task']}")
 
-# Function to delete a task
+
 def delete_task():
     list_tasks()
     try:
@@ -38,7 +38,7 @@ def delete_task():
     except (IndexError, ValueError):
         print("Invalid selection.")
 
-# Function to mark a task as completed
+
 def mark_done():
     list_tasks()
     try:
@@ -48,7 +48,7 @@ def mark_done():
     except (IndexError, ValueError):
         print("Invalid selection.")
 
-# Main loop
+
 while True:
     menu()
     choice = input("Make your selection: ")
@@ -65,4 +65,4 @@ while True:
         break
     else:
         print("Invalid selection!")
-    input("Press Enter to continue...")  # Waiting message
+    input("Press Enter to continue...")
